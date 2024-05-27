@@ -18,6 +18,7 @@
                     }
                 },
                 screens: {
+                    xs: "337px",
                     sm: "640px",
                     md: "768px",
                     lg: "1024px",
@@ -45,6 +46,16 @@
                             <h1 class="text-white text-xl font-semibold ms-2">CakeShop</h1>
                         </a>
                     </div>
+                    <div class="hidden lg:flex lg:gap-x-10">
+                        <a href="#" class="text-md font-semibold leading-6 text-white">Home</a>
+                        <a href="#" class="text-md font-semibold leading-6 text-white">Product</a>
+                    </div>
+                    <div class="flex lg:mx-10 ">
+                        <input type="text" placeholder="Search" class="lg:block bg-gray-200 border border-transparent focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-l-md rounded-md py-1 px-3 xs:hidden sm:w-64">
+                        <button type="submit" class="hidden lg:block lg:bg-red-600 text-white rounded-r-md py-1 lg:px-4 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                     <div class="flex lg:hidden">
                         <button id="mobile-menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                             <span class="sr-only">Open main menu</span>
@@ -53,17 +64,14 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="hidden lg:flex lg:gap-x-12">
-                        <a href="#" class="text-md font-semibold leading-6 text-white">Home</a>
-                        <a href="#" class="text-md font-semibold leading-6 text-white">Category</a>
-                        <a href="#" class="text-md font-semibold leading-6 text-white">My Order</a>
-                    </div>
-                    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    
+                    <div class="hidden lg:flex lg:justify-end">
+                        <a href="#" class=" text-xl font-semibold leading-6 text-white"><i class="fas fa-shopping-cart me-10"></i></a>
                         <a href="#" class=" font-semibold leading-6 text-white flex"><img src="assets/profil.png" width="30px"><span class="ms-2 text-lg">Login</span></a>
                     </div>
                 </nav>
                 <!-- Mobile menu, show/hide based on menu open state. -->
-                <div id="mobile-menu" class="lg:hidden fixed inset-0 z-20 hidden" role="dialog" aria-modal="true">
+                <div id="mobile-menu" class="lg:hidden md:hidden fixed inset-0 z-20 hidden" role="dialog" aria-modal="true">
                     <!-- Background backdrop, show/hide based on slide-over state. -->
                     <div class="fixed inset-0 z-10 bg-black/50" id="mobile-menu-backdrop"></div>
                     <div class="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" id="mobile-menu-content">
@@ -82,8 +90,8 @@
                             <div class="-my-6 divide-y divide-gray-500/10">
                                 <div class="space-y-2 py-6">
                                     <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-                                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Category</a>
-                                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">My Order</a>
+                                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
+                                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Cart</a>
                                 </div>
                                 <div class="py-6">
                                     <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -118,9 +126,9 @@
             <div class="bg-white py-24 sm:py-32">
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
                     <div class="mx-auto max-w-2xl lg:text-center">
-                    <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your app</p>
-                    <p class="mt-6 text-lg leading-8 text-gray-600">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p>
+                    <h2 class="text-base font-semibold leading-7 text-indigo-600">Cake Shop</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Us?</p>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">We're here to help! We provide professional services that we're passionate about, and we're dedicated to serving you wholeheartedly.</p>
                     </div>
                     <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                     <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
@@ -128,45 +136,23 @@
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
                             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                            </svg>
-                            </div>
-                            Push to deploy
-                        </dt>
-                        <dd class="mt-2 text-base leading-7 text-gray-600">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.</dd>
-                        </div>
-                        <div class="relative pl-16">
-                        <dt class="text-base font-semibold leading-7 text-gray-900">
-                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                             </svg>
                             </div>
-                            SSL certificates
+                            Order Guarantee
                         </dt>
-                        <dd class="mt-2 text-base leading-7 text-gray-600">Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.</dd>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">here provides a booking guarantee service, if the results are not satisfactory can make a return</dd>
                         </div>
-                        <div class="relative pl-16">
+                        <div class="relative pl-16 mb-20">
                         <dt class="text-base font-semibold leading-7 text-gray-900">
                             <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
                             <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
                             </svg>
                             </div>
-                            Simple queues
+                            Trustworthy service.
                         </dt>
-                        <dd class="mt-2 text-base leading-7 text-gray-600">Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.</dd>
-                        </div>
-                        <div class="relative pl-16">
-                        <dt class="text-base font-semibold leading-7 text-gray-900">
-                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                            </svg>
-                            </div>
-                            Advanced security
-                        </dt>
-                        <dd class="mt-2 text-base leading-7 text-gray-600">Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.</dd>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">We provide a trustworthy service in working on orders until they reach the buyer safely.</dd>
                         </div>
                     </dl>
                     </div>
@@ -176,48 +162,49 @@
         <section class="bg-black">
             <div class="bg-black mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                 <header>
-                <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
+                <h1 class="text-xl text-center font-bold text-white sm:text-3xl">Cake Variant</h1>
 
-                <p class="mt-4 max-w-md text-gray-500">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-                    dicta incidunt est ipsam, officia dolor fugit natus?
+                <p class="mt-4 mx-auto max-w-lg text-center text-white">
+                    Welcome to our cakeshop! We've got a wide variety of cakes for you to choose from. Whatever you need, we've got it! And they're all guaranteed to be delicious and soft.
                 </p>
                 </header>
 
                 <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <li>
                     <a href="#" class="group relative block overflow-hidden">
-                    <button
-                        class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-                    >
-                        <span class="sr-only">Wishlist</span>
-
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-4 w-4"
-                        >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                        />
-                        </svg>
-                    </button>
-
                     <img
-                        src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
+                        src="assets/service.jpg"
                         alt=""
                         class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
                     />
-
                     <div class="relative border border-gray-100 bg-white p-6">
                         <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
 
-                        <h3 class="mt-4 text-lg font-medium text-gray-900">Robot Toy</h3>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Cake Dessert</h3>
+
+                        <p class="mt-1.5 text-sm text-gray-700">$10.99</p>
+
+                        <form class="mt-4">
+                        <button
+                            class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"
+                        >
+                            Add to Cart
+                        </button>
+                        </form>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="group relative block overflow-hidden">
+                    <img
+                        src="assets/hero.jpg"
+                        alt=""
+                        class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+                    />
+                    <div class="relative border border-gray-100 bg-white p-6">
+                        <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Choco Dessert Cake</h3>
 
                         <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
 
@@ -233,39 +220,17 @@
                 </li>
                 <li>
                     <a href="#" class="group relative block overflow-hidden">
-                    <button
-                        class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-                    >
-                        <span class="sr-only">Wishlist</span>
-
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-4 w-4"
-                        >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                        />
-                        </svg>
-                    </button>
-
                     <img
-                        src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
+                        src="assets/offer.jpg"
                         alt=""
                         class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
                     />
-
                     <div class="relative border border-gray-100 bg-white p-6">
                         <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
 
-                        <h3 class="mt-4 text-lg font-medium text-gray-900">Robot Toy</h3>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Choco Brownies</h3>
 
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+                        <p class="mt-1.5 text-sm text-gray-700">$11.99</p>
 
                         <form class="mt-4">
                         <button
@@ -279,83 +244,15 @@
                 </li>
                 <li>
                     <a href="#" class="group relative block overflow-hidden">
-                    <button
-                        class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-                    >
-                        <span class="sr-only">Wishlist</span>
-
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-4 w-4"
-                        >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                        />
-                        </svg>
-                    </button>
-
                     <img
-                        src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
+                        src="assets/service.jpg"
                         alt=""
                         class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
                     />
-
                     <div class="relative border border-gray-100 bg-white p-6">
                         <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
 
-                        <h3 class="mt-4 text-lg font-medium text-gray-900">Robot Toy</h3>
-
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-
-                        <form class="mt-4">
-                        <button
-                            class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"
-                        >
-                            Add to Cart
-                        </button>
-                        </form>
-                    </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="group relative block overflow-hidden">
-                    <button
-                        class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-                    >
-                        <span class="sr-only">Wishlist</span>
-
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="h-4 w-4"
-                        >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                        />
-                        </svg>
-                    </button>
-
-                    <img
-                        src="https://images.unsplash.com/photo-1599481238640-4c1288750d7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
-                        alt=""
-                        class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
-                    />
-
-                    <div class="relative border border-gray-100 bg-white p-6">
-                        <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
-
-                        <h3 class="mt-4 text-lg font-medium text-gray-900">Robot Toy</h3>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Brown Cookies Cake</h3>
 
                         <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
 
@@ -373,7 +270,7 @@
                 </ul>
             </div>
         </section>
-        <section>
+        <!-- <section>
             <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                 <div class="mx-auto max-w-3xl">
                 <header class="text-center">
@@ -614,23 +511,137 @@
                 </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <footer class="bg-black">
-                <div class="mx-auto max-w-screen-xl px-4 py-14 sm:px-6 lg:px-8">
-                    <div class="sm:flex sm:items-center sm:justify-between">
-                        <div class="flex justify-center text-teal-600 sm:justify-start">
-                        <img src="assets/cake.png" width="30px" alt="">
-                        <h1 class="text-3xl text-white font-bold ms-2">CakeShop</h1>
-                        </div>
+        </section> -->
+        
+        <footer class="bg-white">
+            <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+                <div class="lg:flex lg:items-start lg:gap-8">
+                
 
-                        <p class="mt-4 text-center text-sm text-gray-200 sm:mt-0 sm:text-right">
-                        Copyright &copy; 2022. All rights reserved.
-                        </p>
+                <div class="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
+                    
+
+                    <div class="col-span-3 sm:col-span-1">
+                    <p class="font-medium text-gray-900">Services</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> 1on1 Coaching </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Company Review </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> HR Consulting </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> SEO Optimisation </a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                    <p class="font-medium text-gray-900">Company</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> About </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Meet the Team </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                    <p class="font-medium text-gray-900">Helpful Links</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Contact </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> FAQs </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Live Chat </a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                    <p class="font-medium text-gray-900">Legal</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Accessibility </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Returns Policy </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Refund Policy </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Hiring Statistics </a>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                    <p class="font-medium text-gray-900">Downloads</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> Marketing Calendar </a>
+                        </li>
+
+                        <li>
+                        <a href="#" class="text-gray-700 transition hover:opacity-75"> SEO Infographics </a>
+                        </li>
+                    </ul>
                     </div>
                 </div>
-            </footer>
-        </section>
+                </div>
+
+                <div class="mt-8 border-t border-gray-100 pt-8">
+                <div class="sm:flex sm:justify-between">
+                    <p class="text-xs text-gray-500">&copy; 2022. Company Name. All rights reserved.</p>
+
+                    <ul class="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
+                    <li>
+                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Terms & Conditions </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Privacy Policy </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Cookies </a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
