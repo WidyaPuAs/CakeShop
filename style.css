@@ -1,0 +1,144 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 40rem;
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #41413f;
+    padding: 8px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 0; /* Ubah lebar input menjadi 0 */
+    min-width: 200px; /* Lebar minimum input */
+    transition: width 0.3s ease; /* Tambahkan efek transisi */
+}
+
+.search-btn {
+    padding: 5px 15px;
+    background-color: #b36013;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-icon {
+    margin-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.profile-link {
+    background-color: #fff;
+    color: #f8b400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 500px) {
+    .search-bar input[type="text"] {
+        visibility: hidden; /* Tampilkan input ketika dalam mode mobile */
+    }
+    .search-btn{
+        background-color: transparent;
+    }
+}
+@media (max-width: 788px) {
+    .navbar {
+        padding: 13px 15px; /* Sesuaikan padding untuk perangkat mobile */
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%; /* Tampilkan input ketika dalam mode mobile */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #f8b400;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-menu.active + .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: #41413f; /* Ganti warna link di menu burger */
+    }
+}
